@@ -22,10 +22,6 @@
           placeholder="ingresa el titulo de tu tarea"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input [formControl]="descripcion" label="Descripción de la tarea"
-          placeholder="ingresa la descripción de tu tarea"></ion-input>
-      </ion-item>
-      <ion-item>
         <ion-input [formControl]="fecha" type="date" label="Descripción de la tarea"
           placeholder="ingresa la descripción de tu tarea"></ion-input>
       </ion-item>
@@ -37,10 +33,11 @@
     <h1 style="text-align: center;">Lista de tareas</h1>
     <ion-list>
       <ion-item *ngFor="let task of tasks">
-        <h2>Titulo:{{ task.titulo }}</h2>
+        <p style="font-size: 60;">{{ task.titulo }}
+          {{ task.fecha }}
+        </p>
+        <ion-checkbox></ion-checkbox>
 
-        <p>{{ task.descripcion }}</p>
-        <p>{{ task.fecha }}</p>
       </ion-item>
     </ion-list>
   </div>

@@ -25,3 +25,41 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content {
+  --background: #f8f9fa;
+}
+
+ion-list {
+  margin: 20px;
+}
+
+ion-item {
+  --background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+ion-input {
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+ion-button {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  --background: #007bff;
+  --border-radius: 8px;
+}
+
+h1 {
+  color: #343a40;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+ion-checkbox {
+  margin-left: auto;
+}

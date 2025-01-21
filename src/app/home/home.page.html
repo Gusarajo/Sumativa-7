@@ -12,6 +12,36 @@
       <ion-title size="large">Lista de Tareas</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div style="text-align: center; font-size: 50px;">
+    Escribe tus tareas
+  </div>
+  <div>
+    <ion-list>
+      <ion-item>
+        <ion-input [formControl]="Titulo" label="Titulo de la tarea"
+          placeholder="ingresa el titulo de tu tarea"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [formControl]="descripcion" label="Descripción de la tarea"
+          placeholder="ingresa la descripción de tu tarea"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [formControl]="fecha" type="date" label="Descripción de la tarea"
+          placeholder="ingresa la descripción de tu tarea"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="buttonclick()">Enviar</ion-button>
+  </div>
 
+  <div>
+    <h1 style="text-align: center;">Lista de tareas</h1>
+    <ion-list>
+      <ion-item *ngFor="let task of tasks">
+        <h2>Titulo:{{ task.titulo }}</h2>
 
+        <p>{{ task.descripcion }}</p>
+        <p>{{ task.fecha }}</p>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
